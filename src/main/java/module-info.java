@@ -10,6 +10,7 @@ module com.ag.simuladorcachegui {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires java.desktop;
 
     opens com.ag.simuladorcachegui to javafx.fxml;
     exports com.ag.simuladorcachegui;
