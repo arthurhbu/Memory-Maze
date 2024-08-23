@@ -1,0 +1,6 @@
+#buttonIniciar:hover {
+    -fx-effect: dropshadow(gaussian, #FFFFFF, 30, 0.7, 0, 0);
+}
+
+
+

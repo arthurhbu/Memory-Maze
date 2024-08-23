@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #000F24;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ag.simuladorcachegui.MainController">
+      <ImageView fx:id="backgroundImage" fitHeight="800.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
+
+      </ImageView>
+
+      <Button fx:id="buttonIniciar" alignment="CENTER" layoutX="727.0" layoutY="573.0" mnemonicParsing="false" onAction="#iniciar" prefHeight="127.0" prefWidth="288.0" style="-fx-background-size: cover; -fx-effect: dropshadow(gaussian, #D4BFFF, 20, 0.5, 0, 0); -fx-border-color: transparent; -fx-padding: 0; -fx-background-color: transparent;" styleClass="buttonIniciar" stylesheets="@initialScreen.css" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="54.0" />
+         </font>
+      </Button>
+      <Label fx:id="tittle" layoutX="631.0" layoutY="400.0" prefHeight="229.0" prefWidth="528.0" style="-fx-text-fill: #36006B; -fx-effect: dropshadow(gaussian, #7D00FA, 10, 0.5, 0, 0);" text="Memory Maze" textFill="WHITE">
+      </Label>
+</AnchorPane>
