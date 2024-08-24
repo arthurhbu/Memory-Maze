@@ -11,7 +11,7 @@
 
       </ImageView>
 
-      <Button fx:id="buttonIniciar" alignment="CENTER" layoutX="727.0" layoutY="573.0" mnemonicParsing="false" onAction="#iniciar" prefHeight="127.0" prefWidth="288.0" style="-fx-background-size: cover; -fx-effect: dropshadow(gaussian, #D4BFFF, 20, 0.5, 0, 0); -fx-border-color: transparent; -fx-padding: 0; -fx-background-color: transparent;" styleClass="buttonIniciar" stylesheets="@initialScreen.css" textFill="WHITE">
+      <Button fx:id="buttonIniciar" alignment="CENTER" layoutX="727.0" layoutY="573.0" mnemonicParsing="false" onAction="#iniciar" prefHeight="127.0" prefWidth="288.0" style="-fx-background-size: cover; -fx-effect: dropshadow(gaussian, #D4BFFF, 20, 0.1, 0, 0); -fx-border-color: transparent; -fx-padding: 0; -fx-background-color: transparent;" styleClass="buttonIniciar" stylesheets="@initialScreen.css" textFill="WHITE">
          <font>
             <Font name="Impact" size="54.0" />
          </font>

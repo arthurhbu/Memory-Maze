@@ -5,6 +5,7 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
@@ -13,6 +14,7 @@
    <children>
       <AnchorPane fx:id="leituraPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #000F24;">
          <children>
+            <ImageView fx:id="backgroundImageE" fitHeight="800.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true" />
             <Label layoutX="54.0" layoutY="45.0" prefHeight="67.0" prefWidth="263.0" text="Jogador 1 / P1" textFill="WHITE">
                <font>
                   <Font name="Impact" size="48.0" />
@@ -78,7 +80,7 @@
                   <Font name="Impact" size="20.0" />
                </font>
             </Button>
-            <Label fx:id="errorLabelL" layoutX="348.0" layoutY="331.0" opacity="0.79" prefHeight="38.0" prefWidth="454.0" textFill="RED">
+            <Label fx:id="errorLabelL" layoutX="348.0" layoutY="331.0" opacity="0.79" prefHeight="38.0" prefWidth="454.0" textFill="WHITE">
                <font>
                   <Font name="Impact" size="20.0" />
                </font>
@@ -93,12 +95,7 @@
                   <Font name="Impact" size="27.0" />
                </font>
             </Label>
-<!--            <RadioButton fx:id="leituraRadioBtnLPane" layoutX="474.0" layoutY="133.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="171.0" text="LEITURA" textFill="WHITE">-->
-<!--               <font>-->
-<!--                  <Font name="Impact" size="28.0" />-->
-<!--               </font>-->
-<!--            </RadioButton>-->
-            <RadioButton fx:id="escritaRadioBtnLPane" layoutX="349.0" layoutY="51.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="304.0" text="Transformar / Escrever" textFill="WHITE">
+            <RadioButton fx:id="escritaRadioBtnLPane" layoutX="349.0" layoutY="51.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="304.0" text="Transformar / Escrever" textFill="WHITE" onAction="#atualizaInfosE">
                <font>
                   <Font name="Impact" size="27.0" />
                </font>
@@ -107,6 +104,7 @@
       </AnchorPane>
       <AnchorPane fx:id="escritaPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #000F24;">
          <children>
+            <ImageView fx:id="backgroundImageL" fitHeight="800.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true" />
             <Label layoutX="51.0" layoutY="44.0" prefHeight="67.0" prefWidth="263.0" text="Jogador 1 /  P1" textFill="WHITE">
                <font>
                   <Font name="Impact" size="46.0" />
@@ -187,12 +185,12 @@
 <!--                  <Font name="Impact" size="28.0" />-->
 <!--               </font>-->
 <!--            </RadioButton>-->
-            <RadioButton fx:id="leituraRadioBtn" layoutX="374.0" layoutY="50.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="171.0" text="Mover / Leitura" textFill="WHITE">
+            <RadioButton fx:id="leituraRadioBtn" layoutX="374.0" layoutY="50.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="171.0" text="Mover / Leitura" textFill="WHITE" onAction="#atualizaInfosL">
                <font>
                   <Font name="Impact" size="21.0" />
                </font>
             </RadioButton>
-            <Label fx:id="alertLabelE" layoutX="356.0" layoutY="310.0" opacity="0.79" prefHeight="55.0" prefWidth="476.0" textFill="RED">
+            <Label fx:id="alertLabelE" layoutX="356.0" layoutY="310.0" opacity="0.79" prefHeight="55.0" prefWidth="476.0" textFill="WHITE">
                <font>
                   <Font name="Impact" size="20.0" />
                </font>

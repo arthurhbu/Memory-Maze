@@ -49,6 +49,14 @@ public class MenuController extends mudarTela{
     private Label labelJ3;
 
     @FXML
+    private Button voltarButton;
+
+    @FXML
+    private void voltarTelaInicial() throws IOException {
+        mudarTela("/com/ag/simuladorcachegui/initialScreen.fxml", voltarButton, "/menu.css");
+    }
+
+    @FXML
     private void telaJ1() throws IOException {
         mudarTela("/com/ag/simuladorcachegui/processador1.fxml", jogador1Button, "/processador1.css");
     }
@@ -73,7 +81,10 @@ public class MenuController extends mudarTela{
         Font fontP = Font.loadFont(getClass().getResourceAsStream("BreatheFire.ttf"), 85);
         escolhaPersonagemLabel.setFont(fontP);
 
+        Font fontV = Font.loadFont(getClass().getResourceAsStream("BreatheFire.ttf"), 45);
+
         Font fontJ = Font.loadFont(getClass().getResourceAsStream("BreatheFire.ttf"), 40);
+        voltarButton.setFont(fontV);
         labelJ1.setFont(fontJ);
         labelJ2.setFont(fontJ);
         labelJ3.setFont(fontJ);
@@ -99,12 +110,24 @@ public class MenuController extends mudarTela{
         view3.setFitWidth(300);
         jogador3Button.setGraphic(view3);
 
+        voltarButton.setOnMouseEntered(e -> {
+            voltarButton.setStyle("-fx-text-fill: #000f3b;-fx-padding: 0; -fx-background-color: transparent; -fx-effect: dropshadow(gaussian, #0255DB, 20, 0.5, 0, 0);");
+            voltarButton.setScaleX(1.2);
+            voltarButton.setScaleY(1.2);
+        });
+
+        voltarButton.setOnMouseExited(e -> {
+            voltarButton.setStyle("-fx-text-fill: #000f3b; -fx-padding: 0; -fx-background-color: transparent; -fx-effect: dropshadow(gaussian, #0255DB, 20, 0.1, 0, 0);");
+            voltarButton.setScaleX(1.0);
+            voltarButton.setScaleY(1.0);
+        });
+
         jogador1Button.setOnMouseEntered(e -> {
             view1.setScaleX(1.1);
             view1.setScaleY(1.1);
-            jogador1Button.setStyle("-fx-effect: dropshadow(gaussian, #00ff04, 20, 0.8, 0, 0)");
+            jogador1Button.setStyle("-fx-effect: dropshadow(gaussian, #7D0A0A, 20, 0.8, 0, 0)");
 
-            labelJ1.setStyle("-fx-effect: dropshadow(gaussian, #00ff15, 20, 0.5, 0, 0)");
+            labelJ1.setStyle("-fx-text-fill: #000000;-fx-effect: dropshadow(gaussian, #F31559, 20, 0.5, 0, 0)");
             labelJ1.setScaleX(1.3);
             labelJ1.setScaleY(1.3);
 
@@ -118,7 +141,7 @@ public class MenuController extends mudarTela{
             view1.setScaleX(1.0);
             view1.setScaleY(1.0);
 
-            jogador1Button.setStyle("-fx-background-size: cover; -fx-effect: dropshadow(gaussian, #245400, 20, 0.1, 0, 0) ;-fx-padding: 0; -fx-background-color: transparent; -fx-border-color: transparent");
+            jogador1Button.setStyle("-fx-background-size: cover; -fx-effect: dropshadow(gaussian, #DC5213, 20, 0.1, 0, 0) ;-fx-padding: 0; -fx-background-color: transparent; -fx-border-color: transparent");
             labelJ1.setStyle("-fx-text-fill: #000000;");
             labelJ1.setScaleX(1.0);
             labelJ1.setScaleY(1.0);
@@ -131,7 +154,7 @@ public class MenuController extends mudarTela{
             view2.setScaleY(1.1);
             jogador2Button.setStyle("-fx-effect: dropshadow(gaussian, #00ff91, 20, 0.8, 0, 0)");
 
-            labelJ2.setStyle("-fx-effect: dropshadow(gaussian, #00ccff, 20, 0.5, 0, 0)");
+            labelJ2.setStyle("-fx-text-fill: #000000;-fx-effect: dropshadow(gaussian, #00ccff, 20, 0.5, 0, 0)");
             labelJ2.setScaleX(1.3);
             labelJ2.setScaleY(1.3);
 
@@ -151,6 +174,33 @@ public class MenuController extends mudarTela{
             labelJ2.setScaleY(1.0);
 
             view2.setEffect(null);
+        });
+
+        jogador3Button.setOnMouseEntered(e -> {
+            view3.setScaleX(1.1);
+            view3.setScaleY(1.1);
+            jogador3Button.setStyle("-fx-effect: dropshadow(gaussian, #1900DB, 20, 0.8, 0, 0)");
+
+            labelJ3.setStyle("-fx-text-fill: #000000; -fx-effect: dropshadow(gaussian, #1900DB, 20, 0.5, 0, 0)");
+            labelJ3.setScaleX(1.3);
+            labelJ3.setScaleY(1.3);
+
+            ColorAdjust colorAdjust = new ColorAdjust();
+            colorAdjust.setBrightness(0.2);
+            view3.setEffect(colorAdjust);
+
+        });
+
+        jogador3Button.setOnMouseExited(e -> {
+            view3.setScaleX(1.0);
+            view3.setScaleY(1.0);
+
+            jogador3Button.setStyle("-fx-background-size: cover; -fx-effect: dropshadow(gaussian, #1900DB, 20, 0.1, 0, 0) ;-fx-padding: 0; -fx-background-color: transparent; -fx-border-color: transparent");
+            labelJ3.setStyle("-fx-text-fill: #000000;");
+            labelJ3.setScaleX(1.0);
+            labelJ3.setScaleY(1.0);
+
+            view3.setEffect(null);
         });
     }
 }
